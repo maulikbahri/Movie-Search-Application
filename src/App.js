@@ -1,23 +1,18 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import navbar from './components/navbar';
+import login from './pages/login';
+import main from './pages/main';
+import movie_page from './pages/movie_page';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <navbar />
+      <Route path="/" component={main} />
+      <Route path="/login" component={login} />
+      <Route path="movie_page" component={movie_page} /> 
     </div>
   );
 }
